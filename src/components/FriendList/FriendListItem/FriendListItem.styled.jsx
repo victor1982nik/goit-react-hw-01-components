@@ -3,8 +3,17 @@ import styled from "@emotion/styled";
 export const Item = styled.li`
     display: flex;
     align-items: center;
+    
     gap: 15px;    
     margin-bottom: 10px;
+    width: 350px;
+    padding: 10px 20px;
+
+    border-radius: 5px;
+    box-shadow:
+        1px 3px 1px rgba(0, 0, 0, 0.1),
+        2px 1px 2px rgba(0, 0, 0, 0.08),
+        1px 2px 2px rgba(0, 0, 0, 0.12);
 `;
 
 export const Name = styled.p`
@@ -26,9 +35,8 @@ const SetBgColor = props => {
 }
 
 export const Status = styled.span`
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background-color: ${SetBgColor};
-    
+    background-color: ${SetBgColor};    
 `;

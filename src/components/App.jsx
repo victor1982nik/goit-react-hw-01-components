@@ -10,7 +10,7 @@ import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 
 export const App = () => {  
   return (    
-    <div style={{  color: 'black' }}>
+    <div >
       <SocialsProfile
         username={user.username}
         tag={user.tag}

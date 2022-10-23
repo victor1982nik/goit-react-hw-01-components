@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 import { Transaction } from './Transaction/Transaction';
+import { Container, HeaderCell } from './TransactionHistory.styled';
 
 export function TransactionHistory({ transactions }) {
     //console.log(transactions);
-    return <table className="transaction-history">
-             <thead>
+    return <Container>
+        <table>
+            <thead>
                 <tr>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Currency</th>
+                    <HeaderCell>Type</HeaderCell>
+                    <HeaderCell>Amount</HeaderCell>
+                    <HeaderCell>Currency</HeaderCell>
                 </tr>
             </thead>
-        <tbody>
+            <tbody>
             {transactions.map((item) => {
                 return <Transaction
                     key={item.id}
@@ -21,7 +23,8 @@ export function TransactionHistory({ transactions }) {
             })}
                  
             </tbody>
-           </table>
+        </table>
+    </Container>
 }
 
 
